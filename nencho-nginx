@@ -1,0 +1,41 @@
+server {
+    listen 80;
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    gzip on;
+    gzip_types text/plain application/xml application/json;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /500.html;
+
+    location = /404.html {
+        internal;
+    }
+
+    location = /500.html {
+        internal;
+    }
+}
+
+# Use the official Nginx image as the base
+FROM nginx:stable-alpine
+
+# Remove the default Nginx configuration file
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy custom Nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/
+
+# Copy the static site files to the Nginx server
+COPY index.html /usr/share/nginx/html
+
+# Expose the default Nginx port
+EXPOSE 80
+
