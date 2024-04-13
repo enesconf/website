@@ -1,0 +1,5 @@
+# All robots will be excluded from these directories
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
