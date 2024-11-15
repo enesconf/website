@@ -79,7 +79,7 @@ export function FinalPortfolio() {
 
               <div className="relative w-72 h-72 md:w-96 md:h-96">
                 <Image
-                  src="https://enescetinkaya.net/assets/images/enesconf.jpeg"
+                  src="https://cdn.enescetinkaya.net/enesconf.jpeg"
                   alt="Enes Cetinkaya"
                   width={384}
                   height={384}
@@ -148,62 +148,71 @@ export function FinalPortfolio() {
                 {
                   title: "AWS Solutions Architecture",
                   icon: Cloud,
-                  color: "blue",
+                  bgColor: "blue",
+                  iconColor: "blue",
                   description: "Designing and implementing scalable, high-performance AWS cloud solutions."
                 },
                 {
                   title: "Cloud Migration & Optimization",
                   icon: PlaneTakeoff,
-                  color: "green",
+                  bgColor: "green",
+                  iconColor: "green",
                   description: "Seamlessly migrating applications to AWS and optimizing cloud resources for cost-efficiency."
                 },
                 {
                   title: "DevOps & CI/CD",
                   icon: GitBranch,
-                  color: "pink",
+                  bgColor: "pink",
+                  iconColor: "pink",
                   description: "Implementing robust CI/CD pipelines and DevOps practices for faster, reliable deployments."
                 },
                 {
                   title: "Serverless & Microservices",
                   icon: Zap,
-                  color: "yellow",
+                  bgColor: "yellow",
+                  iconColor: "yellow",
                   description: "Building modern, scalable applications using AWS Lambda and microservices architecture."
                 },
                 {
                   title: "Infrastructure as Code",
                   icon: FileCode,
-                  color: "purple",
+                  bgColor: "purple",
+                  iconColor: "purple",
                   description: "Automating infrastructure deployment and management using tools like AWS CloudFormation and Terraform."
                 },
                 {
                   title: "Cloud Security & Compliance",
                   icon: Shield,
-                  color: "red",
+                  bgColor: "red",
+                  iconColor: "red",
                   description: "Implementing robust security measures and ensuring compliance with AWS best practices."
                 },
                 {
                   title: "Containerization & Orchestration",
                   icon: Box,
-                  color: "indigo",
+                  bgColor: "indigo",
+                  iconColor: "indigo",
                   description: "Leveraging Docker and Kubernetes for efficient application deployment and scaling on AWS."
                 },
                 {
                   title: "Monitoring & Observability",
                   icon: Activity,
-                  color: "teal",
+                  bgColor: "teal",
+                  iconColor: "teal",
                   description: "Implementing comprehensive monitoring and logging solutions using AWS CloudWatch and other tools."
                 },
                 {
                   title: "Cost Management",
                   icon: DollarSign,
-                  color: "green",
+                  bgColor: "green",
+                  iconColor: "green",
                   description: "Optimizing AWS costs through efficient resource allocation, rightsizing, and FinOps practices."
                 }
               ].map((item, index) => (
                 <Card key={index} className="bg-white border-none p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="space-y-4">
-                    <div className={`w-12 h-12 rounded-full bg-${item.color}-100 flex items-center justify-center`}>
-                      <item.icon className={`h-6 w-6 text-${item.color}-600`} />
+                    <div className={`w-12 h-12 rounded-full bg-${item.bgColor}-100 flex items-center justify-center`}>
+                      <item.icon className={`h-6 w-6 text-${item.iconColor}-600`} />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
