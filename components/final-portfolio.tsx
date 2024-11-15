@@ -78,12 +78,10 @@ export function FinalPortfolio() {
               </div>
 
               <div className="relative w-72 h-72 md:w-96 md:h-96">
-                <Image
+                <img
                   src="https://cdn.enescetinkaya.net/enesconf.jpeg"
                   alt="Enes Cetinkaya"
-                  width={384}
-                  height={384}
-                  className="rounded-3xl object-cover shadow-2xl"
+                  className="rounded-3xl object-cover shadow-2xl w-full h-full"
                 />
               </div>
             </div>
