@@ -81,9 +81,9 @@ export function FinalPortfolio() {
                 <Image
                   src="https://cdn.enescetinkaya.net/enesconf.jpeg"
                   alt="Enes Cetinkaya"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-3xl shadow-2xl"
+                  width={384}
+                  height={384}
+                  className="rounded-3xl object-cover shadow-2xl w-full h-full"
                   priority
                 />
               </div>
