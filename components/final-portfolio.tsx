@@ -123,7 +123,7 @@ export function FinalPortfolio() {
                   <div className="grid grid-cols-2 gap-4">
                     {certifications.map((cert, index) => (
                       <div key={index} className="flex flex-col items-center text-center">
-                        <Image 
+                        <img 
                           src={cert.logo} 
                           alt={cert.name} 
                           width={80} 
