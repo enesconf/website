@@ -1,15 +1,14 @@
 'use client'
 
-import { useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Github, Linkedin, Mail, Twitter, Youtube, ArrowRight, MapPin, Cloud, Terminal, Database, GraduationCap, Award, BookOpen, FileCode, GitBranch, BarChart2, Box, Shield, Zap, DollarSign, PlaneTakeoff, Lock, Activity, Video } from 'lucide-react'
+import Image from 'next/image'
+import { Github, Linkedin, Mail, Twitter, Youtube, ArrowRight, MapPin, Cloud, Video, GraduationCap, Award, FileCode, GitBranch, Shield, Zap, DollarSign, PlaneTakeoff, Box, Activity } from 'lucide-react'
 
 export function FinalPortfolio() {
   const { scrollYProgress } = useScroll()
   const headerOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-  const [mounted, setMounted] = useState(false)
 
   const certifications = [
     { name: "AWS Certified Solutions Architect - Professional", logo: "https://cdn.enescetinkaya.net/sapro_badge.png" },
@@ -49,7 +48,7 @@ export function FinalPortfolio() {
                       Engineer
                     </span>
                   </h1>
-                  <p className="text-xl text-gray-600 max-w-2xl">
+                  <p className="text-xl text-gray-600">
                     AWS Community Builder | DevOpsTR Core Member
                   </p>
                 </div>
@@ -61,11 +60,12 @@ export function FinalPortfolio() {
 
                 <div className="flex space-x-4">
                   {[
-                    { Icon: Twitter, link: "https://x.com/enes_conf" },
-                    { Icon: Github, link: "https://github.com/enesconf" },
-                    { Icon: Linkedin, link: "https://www.linkedin.com/in/enes-cetinkaya/" },
-                    { Icon: Youtube, link: "https://www.youtube.com/@enescetinkaya2396" },
-                    { Icon: Mail, link: "mailto:enes@enescetinkaya.net" }
+                    { Icon: Twitter, link: "https://twitter.com/YOUR_TWITTER_USERNAME" },
+                    { Icon: Github, link: "https://github.com/YOUR_GITHUB_USERNAME" },
+                    { Icon: Linkedin, link: "https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" },
+                    { Icon: Youtube, link: "https://www.youtube.com/YOUR_YOUTUBE_CHANNEL" },
+                    { Icon: Mail, link: "mailto:YOUR_EMAIL@example.com" },
+                    { Icon: Video, link: "https://superpeer.com/enescetinkaya" }
                   ].map(({ Icon, link }, i) => (
                     <a key={i} href={link} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full text-gray-600 hover:text-blue-600 hover:border-blue-600 transition-colors">
@@ -78,10 +78,12 @@ export function FinalPortfolio() {
               </div>
 
               <div className="relative w-72 h-72 md:w-96 md:h-96">
-                <img
-                  src="https://cdn.enescetinkaya.net/enesconf.jpeg"
+                <Image
+                  src="https://enescetinkaya.net/assets/images/enesconf.jpeg"
                   alt="Enes Cetinkaya"
-                  className="rounded-3xl object-cover shadow-2xl w-full h-full"
+                  width={384}
+                  height={384}
+                  className="rounded-3xl object-cover shadow-2xl"
                 />
               </div>
             </div>
@@ -121,7 +123,13 @@ export function FinalPortfolio() {
                   <div className="grid grid-cols-2 gap-4">
                     {certifications.map((cert, index) => (
                       <div key={index} className="flex flex-col items-center text-center">
-                        <img src={cert.logo} alt={cert.name} className="w-20 h-20 object-contain mb-2" />
+                        <Image 
+                          src={cert.logo} 
+                          alt={cert.name} 
+                          width={80} 
+                          height={80} 
+                          className="object-contain mb-2" 
+                        />
                         <p className="text-sm text-gray-600">{cert.name}</p>
                       </div>
                     ))}
@@ -210,7 +218,7 @@ export function FinalPortfolio() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Ready to Innovate?</h2>
-              <p className="text-xl text-gray-600">Let's collaborate and build something amazing together.</p>
+              <p className="text-xl text-gray-600">Let&apos;s collaborate and build something amazing together.</p>
               <a href="https://superpeer.com/enescetinkaya" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-8 bg-blue-600 text-white hover:bg-blue-700 transition-colors text-lg px-8 py-3">
                   Get in Touch
@@ -225,7 +233,7 @@ export function FinalPortfolio() {
       <footer className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600">© 2023 Enes Çetinkaya. All rights reserved.</p>
+            <p className="text-gray-600">&#169; 2023 Enes Çetinkaya. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-gray-500" />
               <span className="text-gray-500">Riga, Latvia</span>
