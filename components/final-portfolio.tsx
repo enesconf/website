@@ -78,10 +78,13 @@ export function FinalPortfolio() {
               </div>
 
               <div className="relative w-72 h-72 md:w-96 md:h-96">
-                <img
+                <Image
                   src="https://cdn.enescetinkaya.net/enesconf.jpeg"
                   alt="Enes Cetinkaya"
-                  className="rounded-3xl object-cover shadow-2xl w-full h-full"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-3xl shadow-2xl"
+                  priority
                 />
               </div>
             </div>
@@ -121,7 +124,7 @@ export function FinalPortfolio() {
                   <div className="grid grid-cols-2 gap-4">
                     {certifications.map((cert, index) => (
                       <div key={index} className="flex flex-col items-center text-center">
-                        <img 
+                        <Image 
                           src={cert.logo} 
                           alt={cert.name} 
                           width={80} 
