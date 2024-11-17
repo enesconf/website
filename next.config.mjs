@@ -1,16 +1,16 @@
+// next.config.js
 export default {
+  output: 'export',
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'cdn.enescetinkaya.net',
-        port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'enescetinkaya.net',
-        port: '',
         pathname: '/assets/images/**',
       },
     ],
@@ -18,6 +18,5 @@ export default {
   webpack: (config) => {
     config.cache = false;
     return config;
-  },
-  output: 'out'  // Please note this might not be supported by Next.js directly
+  }
 };
