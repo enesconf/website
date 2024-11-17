@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { Github, Linkedin, Mail, Twitter, Youtube, ArrowRight, MapPin, Cloud, Video, GraduationCap, Award, FileCode, GitBranch, Shield, Zap, DollarSign, PlaneTakeoff, Box, Activity, CheckCircle2 } from 'lucide-react'
 import { ErrorBoundary } from 'react-error-boundary'
 
-export function FinalPortfolio() {
+export function Index() {
   const { scrollYProgress } = useScroll()
   const headerOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
 
@@ -51,12 +51,19 @@ export function FinalPortfolio() {
                       Engineer
                     </span>
                   </h1>
+                  <p className="text-xl text-gray-600 mt-2">
+                    5+ Years of Cloud & DevOps Excellence
+                  </p>
                   <p className="text-xl text-gray-600">
-                    AWS Community Builder | DevOpsTR Core Member
+                    AWS Community Builder | DevOpsTR Core Member | Cloud Enthusiast
                   </p>
                   <Badge variant="outline" className="text-green-600 bg-green-50 border-green-200 text-sm py-1 px-3">
                     <CheckCircle2 className="w-4 h-4 mr-1" />
                     Available for Work
+                  </Badge>
+                  <Badge variant="outline" className="text-blue-600 bg-blue-50 border-blue-200 text-sm py-1 px-3 ml-2">
+                    <Cloud className="w-4 h-4 mr-1" />
+                    AWS Certified
                   </Badge>
                 </div>
                 

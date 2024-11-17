@@ -1,5 +1,5 @@
-import { FinalPortfolio } from "@/components/final-portfolio"
+import { Index } from "@/components/pages-index"
 
 export default function Page() {
-  return <FinalPortfolio />
+  return <Index />
 }
