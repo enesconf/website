@@ -21,3 +21,6 @@ export default {
     },
   };
   
+  module.exports = {
+    output: 'out'
+  };
