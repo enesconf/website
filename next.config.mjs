@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   images: {
     remotePatterns: [
       {
@@ -19,5 +19,5 @@ module.exports = {
     config.cache = false;
     return config;
   },
-  output: 'out'
+  output: 'out'  // Please note this might not be supported by Next.js directly
 };
