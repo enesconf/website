@@ -27,7 +27,7 @@ export function Index() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between h-16">
-            <span className="text-2xl font-bold text-blue-600">EC</span>
+            <span className="text-2xl font-bold text-blue-600">Enes Çetinkaya</span>
             <a href="https://superpeer.com/enescetinkaya" target="_blank" rel="noopener noreferrer">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 transition-colors">
                 Book a Call
