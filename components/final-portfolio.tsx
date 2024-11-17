@@ -3,8 +3,10 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
-import { Github, Linkedin, Mail, Twitter, Youtube, ArrowRight, MapPin, Cloud, Video, GraduationCap, Award, FileCode, GitBranch, Shield, Zap, DollarSign, PlaneTakeoff, Box, Activity } from 'lucide-react'
+import { Github, Linkedin, Mail, Twitter, Youtube, ArrowRight, MapPin, Cloud, Video, GraduationCap, Award, FileCode, GitBranch, Shield, Zap, DollarSign, PlaneTakeoff, Box, Activity, CheckCircle2 } from 'lucide-react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 export function FinalPortfolio() {
   const { scrollYProgress } = useScroll()
@@ -36,6 +38,7 @@ export function FinalPortfolio() {
         </div>
       </motion.header>
 
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
       <main className="pt-16">
         <section className="py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,6 +54,10 @@ export function FinalPortfolio() {
                   <p className="text-xl text-gray-600">
                     AWS Community Builder | DevOpsTR Core Member
                   </p>
+                  <Badge variant="outline" className="text-green-600 bg-green-50 border-green-200 text-sm py-1 px-3">
+                    <CheckCircle2 className="w-4 h-4 mr-1" />
+                    Available for Work
+                  </Badge>
                 </div>
                 
                 <div className="flex items-center space-x-4">
@@ -130,6 +137,9 @@ export function FinalPortfolio() {
                           width={80} 
                           height={80} 
                           className="object-contain mb-2" 
+                          onError={(e) => {
+                            e.currentTarget.src = "/images/placeholder-badge.svg"
+                          }}
                         />
                         <p className="text-sm text-gray-600">{cert.name}</p>
                       </div>
@@ -149,71 +159,71 @@ export function FinalPortfolio() {
                 {
                   title: "AWS Solutions Architecture",
                   icon: Cloud,
-                  bgColor: "blue",
-                  iconColor: "blue",
+                  bgClass: "bg-blue-100",
+                  iconClass: "text-blue-600",
                   description: "Designing and implementing scalable, high-performance AWS cloud solutions."
                 },
                 {
                   title: "Cloud Migration & Optimization",
                   icon: PlaneTakeoff,
-                  bgColor: "green",
-                  iconColor: "green",
+                  bgClass: "bg-green-100",
+                  iconClass: "text-green-600",
                   description: "Seamlessly migrating applications to AWS and optimizing cloud resources for cost-efficiency."
                 },
                 {
                   title: "DevOps & CI/CD",
                   icon: GitBranch,
-                  bgColor: "pink",
-                  iconColor: "pink",
+                  bgClass: "bg-pink-100",
+                  iconClass: "text-pink-600",
                   description: "Implementing robust CI/CD pipelines and DevOps practices for faster, reliable deployments."
                 },
                 {
                   title: "Serverless & Microservices",
                   icon: Zap,
-                  bgColor: "yellow",
-                  iconColor: "yellow",
+                  bgClass: "bg-yellow-100",
+                  iconClass: "text-yellow-600",
                   description: "Building modern, scalable applications using AWS Lambda and microservices architecture."
                 },
                 {
                   title: "Infrastructure as Code",
                   icon: FileCode,
-                  bgColor: "purple",
-                  iconColor: "purple",
+                  bgClass: "bg-purple-100",
+                  iconClass: "text-purple-600",
                   description: "Automating infrastructure deployment and management using tools like AWS CloudFormation and Terraform."
                 },
                 {
                   title: "Cloud Security & Compliance",
                   icon: Shield,
-                  bgColor: "red",
-                  iconColor: "red",
+                  bgClass: "bg-red-100",
+                  iconClass: "text-red-600",
                   description: "Implementing robust security measures and ensuring compliance with AWS best practices."
                 },
                 {
                   title: "Containerization & Orchestration",
                   icon: Box,
-                  bgColor: "indigo",
-                  iconColor: "indigo",
+                  bgClass: "bg-indigo-100",
+                  iconClass: "text-indigo-600",
                   description: "Leveraging Docker and Kubernetes for efficient application deployment and scaling on AWS."
                 },
                 {
                   title: "Monitoring & Observability",
                   icon: Activity,
-                  bgColor: "teal",
-                  iconColor: "teal",
+                  bgClass: "bg-teal-100",
+                  iconClass: "text-teal-600",
                   description: "Implementing comprehensive monitoring and logging solutions using AWS CloudWatch and other tools."
                 },
                 {
                   title: "Cost Management",
                   icon: DollarSign,
-                  bgColor: "green",
-                  iconColor: "green",
+                  bgClass: "bg-green-100",
+                  iconClass: "text-green-600",
                   description: "Optimizing AWS costs through efficient resource allocation, rightsizing, and FinOps practices."
                 }
               ].map((item, index) => (
                 <Card key={index} className="bg-white border-none p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="space-y-4">
-                    <div className={`w-12 h-12 rounded-full bg-${item.bgColor}-100 flex items-center justify-center`}>
-                      <item.icon className={`h-6 w-6 text-${item.iconColor}-600`} />
+                    <div className={`w-12 h-12 rounded-full ${item.bgClass} flex items-center justify-center`}>
+                      <item.icon className={`h-6 w-6 ${item.iconClass}`} />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
@@ -239,6 +249,7 @@ export function FinalPortfolio() {
           </div>
         </section>
       </main>
+      </ErrorBoundary>
 
       <footer className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
