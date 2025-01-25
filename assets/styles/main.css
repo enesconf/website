@@ -15,55 +15,16 @@
   --gap: 20px;
 }
 
-
-@font-face {
-  font-family: 'Baloo 2';
-  src: url('/fonts/Baloo2-Regular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'BrandonText';
-  src: url('/fonts/Baloo2-Medium.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'BrandonText';
-  src: url('/fonts/Baloo2-SemiBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 600;
-}
-
-
-@font-face {
-  font-family: 'BrandonText';
-  src: url('/fonts/Baloo2-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-}
-
-
-@font-face {
-  font-family: 'BrandonText';
-  src: url('/fonts/Baloo2-ExtraBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 800;
-}
-
-
 body {
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: var(--font-size);
   background: var(--app-color);
   color: var(--text);
   line-height: normal;
   letter-spacing: normal;
   transition: var(--theme-animation);
+  font-weight: 200;
 }
-
 
 .container {
   padding-left: 20px;
@@ -216,7 +177,66 @@ a {
   padding-bottom: var(--gap);
 }
 
+.blog-posts,
+.events {
+  margin-bottom: var(--gap);
+}
+
 .certificates img {
   max-height: 100px;
   width: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  font-size: 0.9em;
+}
+
+.portfolio-item {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.events-section {
+  margin: 40px 0;
+}
+
+.event-card {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.event-card p {
+  margin: 10px 0;
+}
+
+.event-card .event-description {
+  font-style: italic;
+  color: #666;
+}
+
+.event-card .event-date {
+  font-weight: bold;
+  color: #333;
 }

@@ -7,13 +7,46 @@
   <meta name="description" content="Enes Çetinkaya,devops,cloud,kloia,obserbility,devops turkey">
   <title>Enes Çetinkaya</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link id="cssvariable" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/main.css">
 
   <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
   <link rel="icon" type="image/png" href="/assets/images/favicon_io/favicon-16x16.png" sizes="16x16">
 
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
   <script src="./assets/scripts/main.js"></script>
+  <script>
+    // Add fade-in animation to elements as they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      });
+
+      document.querySelectorAll('section').forEach((section) => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -49,11 +82,9 @@
         </div>
         <div class="whoami">
           <p>Hello! My name is Enes</p>
-          <p>Platform Engineer<strong><a class="important-message" href="https://www.kloia.com/">@kloia ❤️ Serverless
-              </a></strong> | <strong><a href="https://twitter.com/awscloud">@awscloud</a></strong> Community Builder |
-            Core Member <strong><a href="https://twitter.com/devopstr">@devopstr</a></strong></p>
+          <p>Platform Engineer | <strong><a href="https://twitter.com/awscloud">@awscloud</a></strong> Community Builder</p>
           <p>
-            I'm a mid-level platform engineer with a strong passion for AWS, serverless and cloud native technologies.
+            I'm a senior-level platform engineer with a strong passion for AWS, serverless and cloud native technologies.
             Since 2014, I have been actively involved in the field of platform engineering.
             However, it was in 2020 that I began my professional career in this domain
           </p>
@@ -71,39 +102,46 @@
     <link rel="stylesheet" type="text/css" href="https://widgets.superpeer.com/widget.css">
     <script src="https://widgets.superpeer.com/widget.js"></script>
     <script>window.addEventListener("load", () => { new Superpeer.Widget({ embed: { type: "popup" }, launcher: { type: "superpeer-logo", options: {} }, config: { username: "enescetinkaya", serviceSlug: "Meet" } }) })</script>
-    <div class="container">
-      <h2>Blog Posts</h2>
-      <div class="post">
-        <h3>Cloud Revolution in Local Infrastructure with AWS Outposts Family</h3>
-        <a
-          href="https://enes46ctknya.medium.com/cloud-revolution-in-local-infrastructure-with-aws-outposts-family-cb0189432663">Continue
-          Reading →</a>
+    
+    <section class="blog-posts">
+      <div class="container">
+        <h2>Blog Posts</h2>
+        <div class="post fade-in">
+          <h3>What's New in Kubernetes v1.31: Key Updates, Deprecations, and Features</h3>
+          <a href="https://blog.kloia.com/whats-new-in-kubernetes-v1-31-key-updates-deprecations-and-features-b592bb445534">Continue Reading →</a>
+        </div>
+        <div class="post">
+          <h3>Cloud Revolution in Local Infrastructure with AWS Outposts Family</h3>
+          <a href="https://enes46ctknya.medium.com/cloud-revolution-in-local-infrastructure-with-aws-outposts-family-cb0189432663">Continue Reading →</a>
+        </div>
+        <div class="post">
+          <h3>Using AWS Fargate for Efficient CI/CD Pipelines</h3>
+          <a href="https://enes46ctknya.medium.com/using-aws-fargate-for-efficient-ci-cd-pipelines-235c67f465f2?source=user_profile_page---------2-------------6596e32af906---------------">Continue Reading →</a>
+        </div>
+        <div class="post">
+          <h3>Unpacking Kubernetes 1.28.0: What's New and Improved?</h3>
+          <a href="https://enes46ctknya.medium.com/kubernetes-1-28-0-a-comprehensive-look-at-new-features-improvements-and-changes-130b31dec3dc?source=user_profile_page---------3-------------6596e32af906---------------">Continue Reading →</a>
+        </div>
+        <div class="post">
+          <h3>Send Email for the SES without credentials</h3>
+          <a href="https://enes46ctknya.medium.com/send-email-for-the-ses-without-credentials-267ba13fa58a?source=user_profile_page---------4-------------6596e32af906---------------">Continue Reading →</a>
+        </div>
+        <div class="post">
+          <h3>My CKA Journey</h3>
+          <a href="https://enes46ctknya.medium.com/my-cka-journey-3fcc2aa2210d?source=user_profile_page---------5-------------6596e32af906---------------">Continue Reading →</a>
+        </div>
       </div>
-      <div class="post">
-        <h3>Using AWS Fargate for Efficient CI/CD Pipelines</h3>
-        <a
-          href="https://enes46ctknya.medium.com/using-aws-fargate-for-efficient-ci-cd-pipelines-235c67f465f2?source=user_profile_page---------2-------------6596e32af906---------------">Continue
-          Reading →</a>
+    </section>
+
+    <section class="events">
+      <div class="container">
+        <h2>Speaking & Events</h2>
+        <div class="post">
+          <h3>Cloud 101</h3>
+          <p>Techcareer ile birlikte Cloud ve AWS 101 üzerine bir eğitimin ilk gününü gerçekleştirdik. ☁️🚀 Katılımcılarla bulut teknolojilerinin temellerini konuşup, bu alandaki fırsatları keşfetme şansı yakaladık.</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7266069550415183872/" target="_blank">Event Details →</a>
+        </div>
       </div>
-      <div class="post">
-        <h3>Unpacking Kubernetes 1.28.0: What's New and Improved?</h3>
-        <a
-          href="https://enes46ctknya.medium.com/kubernetes-1-28-0-a-comprehensive-look-at-new-features-improvements-and-changes-130b31dec3dc?source=user_profile_page---------3-------------6596e32af906---------------">Continue
-          Reading →</a>
-      </div>
-      <div class="post">
-        <h3>Send Email for the SES without credentials</h3>
-        <a
-          href="https://enes46ctknya.medium.com/send-email-for-the-ses-without-credentials-267ba13fa58a?source=user_profile_page---------4-------------6596e32af906---------------">Continue
-          Reading →</a>
-      </div>
-      <div class="post">
-        <h3>My CKA Journey</h3>
-        <a
-          href="https://enes46ctknya.medium.com/my-cka-journey-3fcc2aa2210d?source=user_profile_page---------5-------------6596e32af906---------------">Continue
-          Reading →</a>
-      </div>
-    </div>
     </section>
 
     <section class="certificates">
@@ -120,17 +158,10 @@
 
     <section class="social">
       <div class="container social_link">
-        <span>When speak to turkish and learn the devops</span>
-        <a class="line" target="_blank" href="https://www.youtube.com/@DevOpsTurkey/streams">DevOpsTurkey Youtube</a>
-      </div>
-      <div class="container social_link">
         <span>You can follow me on </span>
         <a class="line" target="_blank" href="https://twitter.com/enes_conf">Twitter</a>
         <a class="line" target="_blank" href="https://github.com/enesconf">Github</a>
         <a class="line" target="_blank" href="https://www.linkedin.com/in/enes-cetinkaya/">Linkedin</a>
-      </div>
-      <div class="container social_link">
-        <a class="line" target="_blank" href="https://superpeer.com/enescetinkaya">Let's meet 👋</a>
       </div>
     </section>
   </main>
