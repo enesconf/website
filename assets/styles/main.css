@@ -15,8 +15,43 @@
   --gap: 20px;
 }
 
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/fonts/Baloo2-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'BrandonText';
+  src: url('/fonts/Baloo2-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'BrandonText';
+  src: url('/fonts/Baloo2-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'BrandonText';
+  src: url('/fonts/Baloo2-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'BrandonText';
+  src: url('/fonts/Baloo2-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
   font-size: var(--font-size);
   background: var(--app-color);
   color: var(--text);
