@@ -120,7 +120,15 @@ a {
   width: 8em;
   height: 8em;
   object-fit: cover;
-  border: 3px solid var(--text);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 3px;
+  background: var(--text-hover) border-box;
+  border: 3px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.intro .enesconf .enesconf_img:hover {
+  transform: scale(1.02);
 }
 
 .line::after {
@@ -293,4 +301,13 @@ html {
 .event-card .event-date {
   font-weight: bold;
   color: #333;
+}
+
+.whoami .gradient-text {
+  background: linear-gradient(90deg, #4776E6, #8E54E9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  display: inline-block;
 }
