@@ -123,7 +123,6 @@ a {
   border: 3px solid var(--text);
 }
 
-
 .line::after {
   content: "";
   width: 100%;
@@ -133,6 +132,25 @@ a {
   border-radius: 1em;
 }
 
+.post a {
+  font-weight: 600;
+  line-height: 25px;
+  display: inline-block;
+}
+
+.post a:hover {
+  color: var(--text-hover);
+  opacity: .8;
+}
+
+.post a::after {
+  content: "";
+  width: 100%;
+  height: calc(1em / 6);
+  background: var(--text-hover);
+  display: block;
+  border-radius: 1em;
+}
 
 .social .social_link {
   display: flex;
@@ -213,7 +231,8 @@ a {
 }
 
 .blog-posts,
-.events {
+.events,
+.expertise {
   margin-bottom: var(--gap);
 }
 
