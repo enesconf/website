@@ -169,15 +169,6 @@ a {
   display: inline-block;
 }
 
-.social .social_link a::after {
-  content: "";
-  width: 100%;
-  height: calc(1em / 6);
-  background: var(--text-hover);
-  display: block;
-  border-radius: 1em;
-}
-
 .social .social_link a:hover {
   color: var(--text-hover);
   opacity: .8;
