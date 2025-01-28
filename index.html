@@ -7,6 +7,12 @@
   <meta name="description" content="Platform Engineer specializing in AWS, DevOps, and Cloud Native technologies. AWS Community Builder with expertise in serverless and Kubernetes.">
   <meta name="author" content="Enes Çetinkaya">
   <meta name="keywords" content="AWS, DevOps, Platform Engineering, Cloud Computing, Kubernetes, Serverless, AWS Community Builder">
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./assets/styles/main.css" as="style">
+  <link rel="preload" href="./assets/scripts/main.js" as="script">
+  <link rel="preload" href="./assets/images/enesconf.jpeg" as="image">
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
@@ -24,67 +30,42 @@
 
   <title>Enes Çetinkaya - Platform Engineer | AWS Community Builder</title>
 
-  <link id="cssvariable" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles/main.css">
+  <!-- Critical CSS -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Baloo 2', sans-serif; font-size: 18px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .intro { padding: 20px 0; }
+    .enesconf_img { width: 8em; height: 8em; border-radius: 50%; }
+  </style>
 
+  <link rel="stylesheet" href="./assets/styles/main.css">
   <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico">
   <link rel="icon" type="image/png" href="/assets/images/favicon_io/favicon-16x16.png" sizes="16x16">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .fade-in {
-      animation: fadeIn 0.5s ease-in;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-
-  <script src="./assets/scripts/main.js"></script>
+  <!-- Optimized intersection observer -->
   <script>
-    // Add fade-in animation to elements as they come into view
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-          }
-        });
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach(entry => 
+          entry.isIntersecting && entry.target.classList.add('fade-in')
+        ),
+        { threshold: 0.1 }
+      );
 
-      document.querySelectorAll('section').forEach((section) => {
-        observer.observe(section);
-      });
+      document.querySelectorAll('section').forEach(section => observer.observe(section));
     });
   </script>
+
+  <!-- Main script with defer -->
+  <script src="./assets/scripts/main.js" defer></script>
 </head>
 
 <body>
-  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <symbol id="icon-IcoMoon" viewBox="0 0 32 32">
-        <path
-          d="M8.111 16c0-2.044 1.657-3.701 3.701-3.701s3.701 1.657 3.701 3.701c0 2.044-1.657 3.701-3.701 3.701s-3.701-1.657-3.701-3.701zM16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.836 0 16-7.163 16-16s-7.163-16-16-16zM11.856 29.978c-4.811-2.799-8.046-8.010-8.046-13.978s3.235-11.178 8.046-13.978c4.813 2.799 8.050 8.009 8.050 13.978s-3.237 11.179-8.050 13.978z">
-        </path>
-      </symbol>
-      <symbol id="icon-sun" viewBox="0 0 32 32">
-        <path
-          d="M16 26c1.105 0 2 0.895 2 2v2c0 1.105-0.895 2-2 2s-2-0.895-2-2v-2c0-1.105 0.895-2 2-2zM16 6c-1.105 0-2-0.895-2-2v-2c0-1.105 0.895-2 2-2s2 0.895 2 2v2c0 1.105-0.895 2-2 2zM30 14c1.105 0 2 0.895 2 2s-0.895 2-2 2h-2c-1.105 0-2-0.895-2-2s0.895-2 2-2h2zM6 16c0 1.105-0.895 2-2 2h-2c-1.105 0-2-0.895-2-2s0.895-2 2-2h2c1.105 0 2 0.895 2 2zM25.899 23.071l1.414 1.414c0.781 0.781 0.781 2.047 0 2.828s-2.047 0.781-2.828 0l-1.414-1.414c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0zM6.101 8.929l-1.414-1.414c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l1.414 1.414c0.781 0.781 0.781 2.047 0 2.828s-2.047 0.781-2.828 0zM25.899 8.929c-0.781 0.781-2.047 0.781-2.828 0s-0.781-2.047 0-2.828l1.414-1.414c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-1.414 1.414zM6.101 23.071c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-1.414 1.414c-0.781 0.781-2.047 0.781-2.828 0s-0.781-2.047 0-2.828l1.414-1.414z">
-        </path>
-        <path
-          d="M16 8c-4.418 0-8 3.582-8 8s3.582 8 8 8c4.418 0 8-3.582 8-8s-3.582-8-8-8zM16 21c-2.761 0-5-2.239-5-5s2.239-5 5-5 5 2.239 5 5-2.239 5-5 5z">
-        </path>
-      </symbol>
-      <symbol id="icon-heart" viewBox="0 0 32 32">
-        <path
-          d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
-        </path>
-      </symbol>
-    </defs>
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-IcoMoon" viewBox="0 0 32 32">
+      <path d="M8.111 16c0-2.044 1.657-3.701 3.701-3.701s3.701 1.657 3.701 3.701c0 2.044-1.657 3.701-3.701 3.701s-3.701-1.657-3.701-3.701zM16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.836 0 16-7.163 16-16s-7.163-16-16-16zM11.856 29.978c-4.811-2.799-8.046-8.010-8.046-13.978s3.235-11.178 8.046-13.978c4.813 2.799 8.050 8.009 8.050 13.978s-3.237 11.179-8.050 13.978z"></path>
+    </symbol>
   </svg>
 
   <main class="main">
@@ -182,10 +163,10 @@
       <div class="container">
         <h2>Certificates</h2>
         <div class="certificates">
-          <img src="./assets/images/devopspro_badge.png" alt="DevOps Professional Badge">
-          <img src="./assets/images/sapro_badge.png" alt="Solutions Architect Professional Badge">
-          <img src="./assets/images/finops_badge.png" alt="Finops Practitioner Badge">
-          <img src="./assets/images/cka_badge.png" alt="Kubernetes Administrator Badge">
+          <img src="./assets/images/devopspro_badge.png" alt="DevOps Professional Badge" loading="lazy">
+          <img src="./assets/images/sapro_badge.png" alt="Solutions Architect Professional Badge" loading="lazy">
+          <img src="./assets/images/finops_badge.png" alt="Finops Practitioner Badge" loading="lazy">
+          <img src="./assets/images/cka_badge.png" alt="Kubernetes Administrator Badge" loading="lazy">
         </div>
       </div>
     </section>

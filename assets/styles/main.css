@@ -6,7 +6,6 @@
 
 :root {
   --theme-animation: color .6s, background-color .6s;
-  --font-size-sm: 0.8em;
   --font-size: 18px;
   --font-size-lg: 1.2em;
   --font-size-xl: 1.4em;
@@ -20,6 +19,7 @@
   src: url('/fonts/Baloo2-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -55,17 +55,14 @@ body {
   font-size: var(--font-size);
   background: var(--app-color);
   color: var(--text);
-  line-height: normal;
+  line-height: 1.4;
   letter-spacing: normal;
   transition: var(--theme-animation);
-  font-weight: 200;
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 20px;
+  margin: 0 auto;
   max-width: 900px;
 }
 
@@ -79,8 +76,6 @@ body {
 }
 
 .btn {
-  width: max-content;
-  height: max-content;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -92,8 +87,8 @@ a {
 }
 
 .intro {
-  padding-top: var(--gap);
-  padding-bottom: var(--gap);
+  padding: var(--gap) 0;
+  font-size: var(--font-size-lg);
 }
 
 .intro,
@@ -102,9 +97,8 @@ a {
 }
 
 .main {
-  margin-bottom: calc((var(--gap) *2) + 40px);
+  margin-bottom: calc(var(--gap) * 3);
 }
-
 
 .intro .whoami p {
   margin-bottom: var(--gap-sm);
@@ -131,7 +125,8 @@ a {
   transform: scale(1.02);
 }
 
-.line::after {
+.line::after,
+.post a::after {
   content: "";
   width: 100%;
   height: calc(1em / 6);
@@ -142,7 +137,7 @@ a {
 
 .post a {
   font-weight: 600;
-  line-height: 25px;
+  line-height: 1.4;
   display: inline-block;
 }
 
@@ -151,28 +146,18 @@ a {
   opacity: .8;
 }
 
-.post a::after {
-  content: "";
-  width: 100%;
-  height: calc(1em / 6);
-  background: var(--text-hover);
-  display: block;
-  border-radius: 1em;
-}
-
 .social .social_link {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   margin-bottom: var(--gap-sm);
+  font-size: var(--font-size-lg);
 }
-
 
 .social .social_link::after {
   content: ".";
   margin-left: var(--gap-xs);
 }
-
 
 .social .social_link:first-child {
   margin-bottom: 10px;
@@ -180,12 +165,17 @@ a {
 
 .social .social_link a {
   margin-left: var(--gap-xs);
+  font-weight: 600;
+  display: inline-block;
 }
 
-.social .social_link a {
-  font-weight: 600;
-  line-height: 25px;
-  display: inline-block;
+.social .social_link a::after {
+  content: "";
+  width: 100%;
+  height: calc(1em / 6);
+  background: var(--text-hover);
+  display: block;
+  border-radius: 1em;
 }
 
 .social .social_link a:hover {
@@ -199,15 +189,14 @@ a {
   left: 0;
   width: 100%;
   border-top: 1px solid var(--text-secondary);
-  padding-top: var(--gap);
-  padding-bottom: var(--gap);
+  padding: var(--gap) 0;
   background: var(--app-color-secondary);
   transition: var(--theme-animation);
 }
 
 .footer .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -221,21 +210,14 @@ a {
   color: inherit;
 }
 
-
 @media only screen and (max-width: 480px) {
-  :root {
-    --font-size: 15px;
-  }
-
-  .social .social_link {
-    display: block;
-  }
+  :root { --font-size: 15px; }
+  .social .social_link { display: block; }
 }
 
 .certificates {
   justify-content: space-around;
-  padding-top: var(--gap);
-  padding-bottom: var(--gap);
+  padding: var(--gap) 0;
 }
 
 .blog-posts,
