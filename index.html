@@ -11,7 +11,6 @@
   
   <!-- Preload critical assets -->
   <link rel="preload" href="./assets/styles/main.css" as="style">
-  <link rel="preload" href="./assets/scripts/main.js" as="script">
   <link rel="preload" href="./assets/images/enesconf.jpeg" as="image">
   
   <!-- Open Graph / Social Media -->
@@ -56,9 +55,6 @@
       document.querySelectorAll('section').forEach(section => observer.observe(section));
     });
   </script>
-
-  <!-- Main script with defer -->
-  <script src="./assets/scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -183,13 +179,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="right">
-          <button type="button" class="btn" onclick="setTheme()">
-            <svg id="themeSVG" class="icon">
-              <use xlink:href="#icon-IcoMoon"></use>
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   </footer>

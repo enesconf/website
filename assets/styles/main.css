@@ -12,6 +12,11 @@
   --gap-xs: 5px;
   --gap-sm: 10px;
   --gap: 20px;
+  --text: #787878;
+  --text-secondary: #e4e4e4;
+  --text-hover: #d19aff;
+  --app-color: rgba(252, 252, 252, 0.829);
+  --app-color-secondary: #fff;
 }
 
 @font-face {
